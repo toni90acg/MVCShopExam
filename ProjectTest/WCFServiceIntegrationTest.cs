@@ -36,7 +36,7 @@ namespace ProjectTest
              using (var ctx = new UsersContext())
             {
                 ctx.Products.Add(new Product() { Id=1 , Name="Pera" , Price=Convert.ToDecimal(3.45)});
-                //ctx.SaveChanges();????????????????????
+                ctx.SaveChanges();
             }
 
             var result = _productService.GetAll();
