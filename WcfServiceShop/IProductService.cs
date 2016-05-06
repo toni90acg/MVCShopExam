@@ -14,11 +14,11 @@ namespace WcfServiceShop
     public interface IProductService
     {
         [OperationContract]
-        [WebGet(ResponseFormat = WebMessageFormat.Json, UriTemplate = "Product")]
+        [WebGet(ResponseFormat = WebMessageFormat.Json, UriTemplate = "/Product")]
         IEnumerable<Product> GetAll();
 
         [OperationContract]
-        [WebGet(UriTemplate = "Product/{id}", ResponseFormat = WebMessageFormat.Json)]
+        [WebGet(UriTemplate = "/Product/{id}", ResponseFormat = WebMessageFormat.Json)]
         Product Get(string id);
     }
 }

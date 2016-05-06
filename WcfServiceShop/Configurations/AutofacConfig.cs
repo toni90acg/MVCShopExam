@@ -19,7 +19,7 @@ namespace WcfServiceShop.Configurations
             builder.RegisterType<ProductService>().As<IProductService>();
             builder.RegisterType<RepositoryProduct>().As<IRepositoryProduct>();
             builder.RegisterType<RepositoryTicket>().As<IRepositoryTicket>();
-            builder.RegisterType<UsersContext>().As<IUnitOfWork>().InstancePerLifetimeScope();
+            builder.RegisterType<UsersContext>().As<IDbBase>().As<IUnitOfWork>().InstancePerLifetimeScope();
 
             // Set the dependency resolver.
             return builder.Build();
